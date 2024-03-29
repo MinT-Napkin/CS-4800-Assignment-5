@@ -6,7 +6,7 @@ abstract class FoodItemDecorator implements FoodItem {
     }
 
     @Override
-    public double getPrice() {
+    public  double getPrice() {
         return decoratedFoodItem.getPrice();
     }
 }
