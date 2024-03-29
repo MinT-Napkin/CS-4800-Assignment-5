@@ -6,7 +6,7 @@ public class Driver {
 
         burger = new FoodItemWithMustard(burger);
         fries = new FoodItemWithKetchup(fries);
-        hotdog = new FoodItemWithKetchup(hotdog);
+        hotdog = new FoodItemWithKetchupAndMustard(hotdog);
 
         Order order = new Order();
         order.addItem(burger);
@@ -17,9 +17,9 @@ public class Driver {
 
         LoyaltyStatus loyaltyStatus = new LoyaltyStatus(0.1); // 10% discount
         // 10 + 4 + 5 + 0.4 (ketchup) + 0.7 (mustard) + 1.1 (ketch and mustard)
-        // apply discount 10% => $18.45
+        // apply discount 10% => $19.08
         totalCost = loyaltyStatus.applyDiscount(totalCost);
 
-        System.out.println("Total cost: $" + totalCost);
+        System.out.println("Total cost of Order: $" + totalCost);
     }
 }
