@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ConcreteFoodItemTest {
@@ -53,7 +54,15 @@ class LoyaltyStatusTest {
 class OrderTest {
 
     @Test
-    public void testAddItemAndGetTotalCost() {
+    public void testAddItem() {
+        Order order = new Order();
+        FoodItem foodItem = new ConcreteFoodItem(10.0);
+        order.addItem(foodItem);
+        assertTrue(order.getItems().contains(foodItem));
+    }
+
+    @Test
+    public void testGetTotalCost() {
         Order order = new Order();
         FoodItem foodItem = new ConcreteFoodItem(10.0);
         order.addItem(foodItem);

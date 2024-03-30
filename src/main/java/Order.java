@@ -15,4 +15,8 @@ public class Order {
         }
         return totalCost;
     }
+
+    public List<FoodItem> getItems() {
+        return items;
+    }
 }
